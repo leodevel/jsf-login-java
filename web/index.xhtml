@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+      <!--xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"-->
+    <h:head>
+        <title>Login</title>
+    </h:head>
+    <h:body>
+
+        <h:form enctype="multipart/form-data" id="formLogin">
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <h:inputText a:placeholder="Login" value="#{LoginBean.login}" id="txtLogin" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h:message for="txtLogin"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h:inputSecret a:placeholder="Senha" value="#{LoginBean.password}" id="txtPassword" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h:message for="txtPassword"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h:commandButton value="Entrar" action="#{LoginBean.signIn}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h:message for="formLogin"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </h:form>
+
+    </h:body>
+</html>
